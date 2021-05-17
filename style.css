@@ -1,7 +1,29 @@
 body {
     font: normal 15pt Arial;
+    background-color: #c1daff;
 }
 
-div#footer-futuro-doar {
-    font-size: 7pt;
+#content {
+    background-color: aliceblue;
+    margin-top: -35px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 7px;
+    box-shadow: 2px 2px 9px rgb(12, 0, 0);
+}
+
+#escolhas {
+    text-align: center;
+}
+
+#star-img {
+    width: 185px;
+    height: 240px;
+}
+
+#footer-futuro-doar {
+    font-size: 4pt;
 }
