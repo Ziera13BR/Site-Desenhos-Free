@@ -1,6 +1,6 @@
 body {
-    font: normal 15pt Arial;
-    background-color: #c1daff;
+    font: normal 8pt Arial;
+    background-color: aliceblue;
 }
 
 #content {
@@ -26,4 +26,11 @@ body {
 
 #footer-futuro-doar {
     font-size: 4pt;
+}
+
+@media only screen and (min-width: 769px) {
+    body {
+        font: normal 15pt Arial;
+        background-color: #c1daff;
+    }
 }
