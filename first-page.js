@@ -1,6 +1,6 @@
 function onclick() {
     document.getElementById("star-btn").onclick = function () {
-        location.href = 'file:///C:/Geral/Site-Desenhos-Free-1/star-vs-as-forcas-do-mal/index.html'
+        location.href += 'star-vs-as-forcas-do-mal'
     }
     
 }
