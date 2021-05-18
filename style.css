@@ -19,9 +19,13 @@ body {
     text-align: center;
 }
 
-#star-img {
-    width: 185px;
-    height: 240px;
+#star-btn {
+    background-image: url(https://i.pinimg.com/474x/b4/f0/4f/b4f04fa480a692b73893e6d51cb3fd1d--star-art-star-butterfly.jpg);
+    background-repeat: no-repeat;
+    background-size: 185px 240px;
+    background-position: center;
+    width: 191px;
+    height: 246px;
 }
 
 #footer-futuro-doar {
