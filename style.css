@@ -25,12 +25,15 @@ body {
 }
 
 #footer-futuro-doar {
-    font-size: 4pt;
+    font-size: 3pt;
 }
 
 @media only screen and (min-width: 769px) {
     body {
         font: normal 15pt Arial;
-        background-color: #c1daff;
+    }
+
+    #footer-futuro-doar {
+        font-size: 4pt;
     }
 }
