@@ -15,6 +15,7 @@
         import { elementCreator } from './element-creator.js'
         import { pularAbertura } from './pular-abertura.js'
         import { runScript } from './script.js'
+        import { timeSaver } from './time-saver.js'
 
         document.onreadystatechange = function () {
             if (document.readyState === 'complete') {
@@ -23,6 +24,7 @@
                 var video = `videos/${url.searchParams.get("v")}.mp4`
                 var aberturainicio = Number(url.searchParams.get("as"))
                 var aberturafim = Number(url.searchParams.get("ae"))
+                var endingTime = Number(url.searchParams.get("et"))
 
 
                 var btnpa = document.createElement("input")
@@ -41,13 +43,15 @@
                 document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
 
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
+
+                timeSaver(video, aberturafim, endingTime)
             }
         }
     </script>
 </head>
 
 <body>
-    <div id="content"><span>16</span></div>
+    <div id="content"><span>17</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
