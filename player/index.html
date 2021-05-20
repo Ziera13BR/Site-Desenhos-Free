@@ -16,24 +16,15 @@
         import { pularAbertura } from './pular-abertura.js'
         import { runScript } from './script.js'
 
-        document.onreadystatechange = function () {
+        document.onreadystatechange = async function () {
             if (document.readyState === 'complete') {
                 var url_string = window.location.href
                 var url = new URL(url_string)
                 var video = `videos/${url.searchParams.get("v")}.mp4`
 
-                elementCreator(video)
-                runScript()
+                await elementCreator(video)
+                await runScript()
 
-                var btnpa = document.createElement("input")
-                btnpa.setAttribute("id", "btnpa")
-                btnpa.setAttribute("type", "button")
-                btnpa.setAttribute("value", "PULAR ABERTURA")
-                btnpa.disabled = true
-                btnpa.setAttribute("class", "vjs-pular-abertura")
-                btnpa.style.display = "none"
-
-                document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
             }
         }
@@ -41,7 +32,7 @@
 </head>
 
 <body>
-    <div id="content"><span>10</span></div>
+    <div id="content"><span>11</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>

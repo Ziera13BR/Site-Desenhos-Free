@@ -5,6 +5,16 @@ export function runScript() {
     var aberturafim = Number(url.searchParams.get("ae"))
 
 
+    var btnpa = document.createElement("input")
+    btnpa.setAttribute("id", "btnpa")
+    btnpa.setAttribute("type", "button")
+    btnpa.setAttribute("value", "PULAR ABERTURA")
+    btnpa.disabled = true
+    btnpa.setAttribute("class", "vjs-pular-abertura")
+    btnpa.style.display = "none"
+
+    document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
+
     var myPlayer = videojs(document.getElementById('video'))
     var loop = setInterval(function () {
         if (myPlayer.currentTime() >= aberturainicio && myPlayer.currentTime() <= aberturafim) {
