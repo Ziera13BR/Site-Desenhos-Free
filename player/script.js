@@ -1,5 +1,5 @@
 export default function runScript() {
-    import createElements from './element-creator.js'
+    import elementCreator from './element-creator.js'
 
     var url_string = window.location.href
     var url = new URL(url_string)
@@ -7,7 +7,7 @@ export default function runScript() {
     var aberturainicio = Number(url.searchParams.get("as"))
     var aberturafim = Number(url.searchParams.get("ae"))
 
-    createElements(video)
+    elementCreator(video)
 
 
     var myPlayer = videojs(document.getElementById('video'))
