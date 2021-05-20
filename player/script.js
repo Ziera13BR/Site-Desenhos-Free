@@ -1,4 +1,4 @@
-export function runScript(aberturainicio, aberturafim) {
+export function runScript(aberturainicio, aberturafim, btnpa) {
     var myPlayer = videojs(document.getElementById('video'))
     var loop = setInterval(function () {
         if (myPlayer.currentTime() >= aberturainicio && myPlayer.currentTime() <= aberturafim) {

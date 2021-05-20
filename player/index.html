@@ -24,8 +24,6 @@
                 var aberturainicio = Number(url.searchParams.get("as"))
                 var aberturafim = Number(url.searchParams.get("ae"))
 
-                elementCreator(video)
-                runScript(aberturainicio, aberturafim)
 
                 var btnpa = document.createElement("input")
                 btnpa.setAttribute("id", "btnpa")
@@ -35,6 +33,11 @@
                 btnpa.setAttribute("class", "vjs-pular-abertura")
                 btnpa.style.display = "none"
 
+
+                elementCreator(video)
+                runScript(aberturainicio, aberturafim, btnpa)
+
+                
                 document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
 
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
@@ -44,7 +47,7 @@
 </head>
 
 <body>
-    <div id="content"><span>15</span></div>
+    <div id="content"><span>16</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
