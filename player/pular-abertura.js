@@ -1,4 +1,4 @@
-export default function pularAbertura() {
+export function pularAbertura() {
     var url_string = window.location.href
     var url = new URL(url_string)
     var aberturafim = Number(url.searchParams.get("ae"))

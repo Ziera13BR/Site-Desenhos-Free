@@ -1,4 +1,4 @@
-export default function elementCreator(video) {
+export function elementCreator(video) {
     var element = document.createElement("video")
     element.setAttribute("id", "video")
     element.setAttribute("class", "video-js vjs-fluid")

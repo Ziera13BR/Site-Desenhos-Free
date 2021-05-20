@@ -1,4 +1,4 @@
-export default function runScript() {
+export function runScript() {
     var url_string = window.location.href
     var url = new URL(url_string)
     var aberturainicio = Number(url.searchParams.get("as"))
@@ -26,7 +26,7 @@ export default function runScript() {
 
     document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
 
-    
+
     myPlayer.addClass("vjs-ziera")
 
     myPlayer.on('playing', function () {
