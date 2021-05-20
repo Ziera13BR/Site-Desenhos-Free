@@ -16,7 +16,7 @@
         import { pularAbertura } from './pular-abertura.js'
         import { runScript } from './script.js'
 
-        document.onreadystatechange = async function () {
+        document.onreadystatechange = function () {
             if (document.readyState === 'complete') {
                 var url_string = window.location.href
                 var url = new URL(url_string)
@@ -24,10 +24,10 @@
                 var aberturainicio = Number(url.searchParams.get("as"))
                 var aberturafim = Number(url.searchParams.get("ae"))
 
-                await elementCreator(video)
-                await runScript(aberturainicio, aberturafim)
+                elementCreator(video)
+                runScript(aberturainicio, aberturafim)
 
-                
+
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
             }
         }
@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div id="content"><span>13</span></div>
+    <div id="content"><span>14</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
