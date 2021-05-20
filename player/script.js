@@ -16,16 +16,6 @@ export function runScript() {
         }
     }, 10)
 
-    var btnpa = document.createElement("input")
-    btnpa.setAttribute("id", "btnpa")
-    btnpa.setAttribute("type", "button")
-    btnpa.setAttribute("value", "PULAR ABERTURA")
-    btnpa.disabled = true
-    btnpa.setAttribute("class", "vjs-pular-abertura")
-    btnpa.style.display = "none"
-
-    document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
-
 
     myPlayer.addClass("vjs-ziera")
 
