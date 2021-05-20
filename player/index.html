@@ -24,7 +24,16 @@
 
                 elementCreator(video)
                 runScript()
-                
+
+                var btnpa = document.createElement("input")
+                btnpa.setAttribute("id", "btnpa")
+                btnpa.setAttribute("type", "button")
+                btnpa.setAttribute("value", "PULAR ABERTURA")
+                btnpa.disabled = true
+                btnpa.setAttribute("class", "vjs-pular-abertura")
+                btnpa.style.display = "none"
+
+                document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
             }
         }
@@ -32,7 +41,7 @@
 </head>
 
 <body>
-    <div id="content"><span>8</span></div>
+    <div id="content"><span>9</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
