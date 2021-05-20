@@ -11,7 +11,7 @@ export function timeSaver(video, aberturafim, endingTime) {
                 } else {
                     if (myPlayer.currentTime() > aberturafim) {
                         localStorage.removeItem(video)
-                        localStorage.setItem(video, myPlayer.currentTime() - 2)
+                        localStorage.setItem(video, (myPlayer.currentTime() - 2))
                     }
                 }
             }, 500)
