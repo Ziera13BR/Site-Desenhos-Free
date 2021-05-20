@@ -14,6 +14,7 @@
     <script type="module">
         import { elementCreator } from './element-creator.js'
         import { pularAbertura } from './pular-abertura.js'
+        import { runScript } from './script.js'
 
         document.onreadystatechange = async function () {
             if (document.readyState === 'complete') {
@@ -24,42 +25,17 @@
                 var aberturafim = Number(url.searchParams.get("ae"))
 
                 await elementCreator(video)
+                await runScript(aberturainicio, aberturafim)
 
-                var btnpa = document.createElement("input")
-                btnpa.setAttribute("id", "btnpa")
-                btnpa.setAttribute("type", "button")
-                btnpa.setAttribute("value", "PULAR ABERTURA")
-                btnpa.disabled = true
-                btnpa.setAttribute("class", "vjs-pular-abertura")
-                btnpa.style.display = "none"
-
-                document.getElementsByClassName("vjs-ziera")[0].insertBefore(btnpa, document.getElementsByClassName("vjs-error-display")[0])
+                
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
-
-                var myPlayer = videojs(document.getElementById('video'))
-                var loop = setInterval(function () {
-                    if (myPlayer.currentTime() >= aberturainicio && myPlayer.currentTime() <= aberturafim) {
-                        document.getElementById("btnpa").disabled = false
-                    }
-                    if (myPlayer.currentTime() > aberturafim) {
-                        document.getElementById("btnpa").remove()
-                        clearInterval(loop)
-                    }
-                }, 10)
-
-
-                myPlayer.addClass("vjs-ziera")
-
-                myPlayer.on('playing', function () {
-                    btnpa.style.display = "block"
-                })
             }
         }
     </script>
 </head>
 
 <body>
-    <div id="content"><span>12</span></div>
+    <div id="content"><span>13</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
