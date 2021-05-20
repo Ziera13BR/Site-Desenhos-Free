@@ -27,7 +27,6 @@ function createElements(video) {
     btnpa.setAttribute("type", "button")
     btnpa.setAttribute("value", "PULAR ABERTURA")
     btnpa.disabled = true
-    btnpa.setAttribute("onclick", "pularAbertura()")
     btnpa.setAttribute("class", "vjs-pular-abertura")
     btnpa.style.display = "none"
 

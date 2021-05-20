@@ -18,13 +18,14 @@
         document.onreadystatechange = function () {
             if (document.readyState === 'complete') {
                 runScript()
+                document.getElementById('btnpa').addEventListener('click', pularAbertura)
             }
         }
     </script>
 </head>
 
 <body>
-    <div id="content"><span>1</span></div>
+    <div id="content"><span>2</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
