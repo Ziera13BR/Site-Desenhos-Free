@@ -12,11 +12,17 @@
     <link rel="stylesheet" href="vjs-ziera.css">
 
     <script type="module">
+        import elementCreator from './element-creator.js'
         import pularAbertura from './pular-abertura.js'
         import runScript from './script.js'
 
         document.onreadystatechange = function () {
             if (document.readyState === 'complete') {
+                var url_string = window.location.href
+                var url = new URL(url_string)
+                var video = `videos/${url.searchParams.get("v")}.mp4`
+
+                elementCreator(video)
                 runScript()
                 document.getElementById('btnpa').addEventListener('click', pularAbertura)
             }
@@ -25,7 +31,7 @@
 </head>
 
 <body>
-    <div id="content"><span>4</span></div>
+    <div id="content"><span>5</span></div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </body>
